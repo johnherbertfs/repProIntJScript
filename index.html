@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Introdução Programação com JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+
+    <!-- coloquei essa tag style para nao ter que criar um aquivo .css -->
+    <style>
+        body {
+            background-color: #c1a97e;
+        }
+    </style>
+
+    <!-- quando a pagina for totalmente carregada chamara a funcao -->
+    <body onload="indexCarregado()">
+
+        <script type="text/javascript" src="main.js"></script>
+        <h1>Teste!</h1>
+        <!-- botao para chamar a funcao de teste 'funcaoSoma()' -->
+        <button type="button" onclick="funcaoSoma()">Clique somar dois numeros!</button>
+        <br>
+        <br>
+        <!-- chamando a funcao criada 'clicaBotao()' definida no arquivo 'main.js' -->
+        <button type="button" onclick="clicaBotao()">Simples Botão!</button>
+        <!-- a linha abaixo sera modificada; sera recuperado o elemento de id 'clicado' -->
+        <!-- e concatenara com a funcao '<obj_dom>.innerHTML = <conteudo_a_adicionar>' -->
+        <h4 id="clicado">Botão não foi clicado!</h4>
+        <br>
+        <br>
+        <!-- ir para outra pagina com a funcao irPagina2() -->
+        <button type="button" onclick="irPagina2()">Ir Para a Segunda Página!!!</button>
+        <br>
+        <br>
+        <!-- neste exemplo o evento do mouse irei tratar quando pegar elementId 'mostrarImg' -->
+        <p id="mostrarImg" onmouseover="mostrarImg()" onmouseout="esconderImg()">Mostrar imagem 1</p>
+        <!-- neste exemplo na chamada da funcao passo o proprio elemento como parametro -->
+        <!-- neste caso não vai ser necessário chamar no JS o getElementById -->
+        <p id="mostrarImg2" onmouseover="mostrarImg2(this)" onmouseout="esconderImg2(this)">Mostrar imagem 2</p>
+        <br>
+        <br>
+        <select onchange="valorSelect1(this)">
+            <option value="">escolher valor primeiro select</option>
+            <option value="Valor 1">Primeiro Valor S1</option>
+            <option value="Valor 2">Segundo Valor S1</option>
+            <option value="Valor 3">Terceiro Valor S1</option>
+        </select>
+        <p id="escolhaSelect">Nenhum valor escolhido no primeiro select.</p>
+        <br>
+        <select onchange="valorSelect2(this)">
+            <option value="">escolher valor segundo select</option>
+            <option value="Valor 1">Primeiro Valor S2</option>
+            <option value="Valor 2">Segundo Valor S2</option>
+            <option value="Valor 3">Terceiro Valor S3</option>
+        </select>
+        <p id="escolhaSelect">Nenhum valor escolhido no segundo select.</p>
+    </body>
+
+</html>
